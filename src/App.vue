@@ -1,9 +1,7 @@
 <template>
-  <div id="nav">
-    <!-- <router-link to="/">Welcome</router-link> -->
-    <router-link to="/home">Calcular Pressupost</router-link>
-  </div>
-  <router-view></router-view>
+  <b-container id="container" style="background-color: #fffbf0">
+    <router-view></router-view>
+  </b-container>
 </template>
 
 <script>
@@ -14,5 +12,7 @@ export default {
 </script>
 
 <style scoped lang="css">
-
+  #container {
+    background-color: #FEFCF4;
+  }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div id="checkboxes" style="display: block; text-align: left">
-      <p>Què vols fer?</p>
+      <h1>Què vols fer?</h1>
 
       <input type="checkbox" id="webPage" value="500" @click="webPage=!webPage; webPageCount(); totalQuote()" :webPage="webPage">
       <label for="webPage">Una pàgina web (500€)</label><br>
@@ -17,9 +17,9 @@
       
       <span>Preu: {{ quote + ' €'}}</span>
 
-      <button class="btn">
+      <button>
         <i class="fa fa-home">
-            <router-link to="/">Torna enrere</router-link>
+            <router-link to="/">TORNA</router-link>
         </i>
       </button>
 
@@ -95,7 +95,35 @@ export default {
 </script>
   
 <style scoped lang="css">
+    h1 {
+        margin-bottom: 40px;
+    }
+
     span {
         display: block;
+        margin-bottom: 30px;
     }
+
+    label {
+        margin-bottom: 10px;
+    }
+    
+    button {
+        border: 1px solid;
+        padding: 1em;
+        box-shadow: 5px 5px 0px 1px #FFD420;
+        outline: 1px solid #FFD420;
+        transition: outline 1s ease 0s;
+    }
+
+    button:hover {
+        outline: 0px;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        font-style: normal;
+    }
+
 </style>

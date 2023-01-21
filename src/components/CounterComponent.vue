@@ -29,10 +29,15 @@
             > 
             <button @click.prevent="langQty(1); setLanguages(languages)">+</button>
         </div>
+
+        <!-- Modal -->
+
+        
     </div>
 </template>
 
 <script>
+
 export default {
     name: "CounterComponent", 
     emits: ['click'],
@@ -71,6 +76,7 @@ export default {
 }
 </script>
 
+
 <style scoped lang="css">
     div {
         display:flex;
@@ -81,12 +87,17 @@ export default {
         margin: 10px;
         padding-left: 0px;
     }
+    
     .label {
         width: 150px;
     }
 
     #divPag {
         margin-bottom:5px;
+    }
+
+    .img-fluid {
+        width: 5%;
     }
 
 </style>

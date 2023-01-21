@@ -50,8 +50,8 @@ export default {
 <style scoped lang="css">
     .panell {
         border: 1px solid;
-        border-radius: 15px;
         padding: 1em;
+        box-shadow: 5px 5px 0px 1px #FFD420;
     }
     .inputDiv {
         display:block;
