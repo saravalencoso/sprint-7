@@ -3,10 +3,10 @@
       <h1>Benvingut</h1>
       <div id="textCard">
         <p>Benvingut a la nostra aplicació de pressupostos per a pàgines web! </p>
-        <p>Amb aquesta eina, podràs calcular el pressupost per al desenvolupament de la teva <b>pàgina web, consultoria SEO i campanya de Google Ads</b>. </p>
+        <p>Amb aquesta eina, podràs calcular el pressupost per al desenvolupament de la teva pàgina <b>web, consultoria SEO i campanya de Google Ads</b>. </p>
         <p>Selecciona les opcions que necessitis i, en cas d'escollir l'opció de pàgina web, podràs especificar el nombre de pàgines i llengües 
             per obtenir un pressupost final més precís.</p>
-        <p> Gràcies per utilitzar la nostra aplicació i si necessites ajuda, no dubtis en contactar-nos.</p>
+        <p> Gràcies per utilitzar la nostra aplicació i si necessites ajuda, <b>no dubtis en contactar-nos.</b></p>
       </div>
     <button>    
       <router-link to="/home">Calcular Pressupost</router-link>
