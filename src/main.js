@@ -6,6 +6,8 @@ import App from "./App.vue";
 import HomeComponent from "./components/HomeComponent.vue";
 import WelcomeComponent from "./components/WelcomeComponent.vue";
 
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const routes = [
   {

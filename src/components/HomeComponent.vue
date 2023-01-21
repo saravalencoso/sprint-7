@@ -6,7 +6,6 @@
       <label for="webPage">Una pàgina web (500€)</label><br>
       
       <PanellComponent v-if="webPage" @changePages="changePages" :webQuote="changeLanguages"></PanellComponent>
-        <!--  -->
 
       <input type="checkbox" id="seo" value="300" @click="seoCount(); totalQuote()" :seo="seo">
       <label for="seo">Una consultoria SEO (300€)</label><br>
