@@ -29,11 +29,8 @@
             > 
             <button @click.prevent="langQty(1); setLanguages(languages)">+</button>
         </div>
-
-        <!-- Modal -->
-
-        
     </div>
+
 </template>
 
 <script>
@@ -71,6 +68,9 @@ export default {
             if(value < 0 && this.languages > 1) { this.languages += value; }
             if(value > 0 && this.languages >= 1) { this.languages += value; }
             console.log(this.languages)
+        },
+        showModal() {
+            this.$refs['my-modal'].show();
         }
     }
 }
