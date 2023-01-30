@@ -10,6 +10,7 @@
                 type="number"
                 v-model="pages"
                 @change="setPages(pages)"
+                readonly 
             > 
             <button @click.prevent="pageQty(1); setPages(pages)">+</button>
         </div>
@@ -26,6 +27,7 @@
                 type="number"
                 v-model="languages"
                 @change="setLanguages(languages)"
+                readonly 
             > 
             <button @click.prevent="langQty(1); setLanguages(languages)">+</button>
         </div>
@@ -68,11 +70,10 @@ export default {
             if(value < 0 && this.languages > 1) { this.languages += value; }
             if(value > 0 && this.languages >= 1) { this.languages += value; }
             console.log(this.languages)
-        },
-        showModal() {
-            this.$refs['my-modal'].show();
         }
     }
+
+    
 }
 </script>
 

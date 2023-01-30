@@ -17,11 +17,9 @@
       
       <span>Preu: {{ quote + ' €'}}</span>
 
-      <button>
-        <i class="fa fa-home">
-            <router-link to="/">TORNA</router-link>
-        </i>
-      </button>
+      <router-link to="/">
+        <button>TORNA</button>
+      </router-link>
 
     </div>
 </template>

@@ -8,9 +8,9 @@
             per obtenir un pressupost final més precís.</p>
         <p> Gràcies per utilitzar la nostra aplicació i si necessites ajuda, <b>no dubtis en contactar-nos.</b></p>
       </div>
-    <button>    
-      <router-link to="/home">Calcular Pressupost</router-link>
-    </button>
+      <router-link to="/home">
+        <button>Calcular Pressupost</button>
+      </router-link>
   </div>
 </template>
 
