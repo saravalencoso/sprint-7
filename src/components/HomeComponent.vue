@@ -1,10 +1,11 @@
 <template>
     <div id="checkboxes" style="display: block; text-align: left">
       <h1>Què vols fer?</h1>
-
-      <input type="checkbox" id="webPage" value="500" @click="webPage=!webPage; webPageCount(); totalQuote()" :webPage="webPage">
+    
+      <input type="checkbox" id="webPage" value="500" @click="webPage=!webPage; shareLink(); webPageCount(); totalQuote()" :webPage="webPage">
       <label for="webPage">Una pàgina web (500€)</label><br>
-      
+      <!-- :to="{query: {seo: seo}}  -->
+
       <PanellComponent v-if="webPage" @changePages="changePages" :webQuote="changeLanguages"></PanellComponent>
 
       <input type="checkbox" id="seo" value="300" @click="seoCount(); totalQuote()" :seo="seo">
@@ -17,6 +18,10 @@
       
       <span>Preu: {{ quote + ' €'}}</span>
 
+      <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" ref="tt" data-bs-placement="top" title="Tooltip on top">
+        Tooltip on top
+    </button>
+
       <router-link to="/">
         <button>TORNA</button>
       </router-link>
@@ -26,6 +31,7 @@
 
 <script>
 import PanellComponent from './PanellComponent.vue'
+import { Tooltip } from 'bootstrap'
 
 export default {
     name:'HomeComponent', 
@@ -51,7 +57,44 @@ export default {
                 this.numberPages = 1;
                 this.numberLanguages = 1;
             }
+            console.log(this.$route)
+            this.$router.push({
+                name: 'home',
+                query: {...this.$route.query, paginaWeb: value}
+            })
+        },
+        seo: function(value) {
+            this.$router.push({
+                name: 'home',
+                query: {...this.$route.query, seo: value}
+            })
+        },
+        googleAds: function(value) {
+            this.$router.push({
+                name: 'home',
+                query: {...this.$route.query, googleAds: value}
+            })
+        },
+        numberPages: function(value) {
+            this.$router.push({
+                name: 'home',
+                query: {...this.$route.query, numberPages: value}
+            })
+        },
+        numberLanguages: function(value) {
+            this.$router.push({
+                name: 'home',
+                query: {...this.$route.query, numberLanguages: value}
+            })
+        },
+        "$route.query.paginaWeb":{ 
+            immediate: true, handler(paginaWeb){
+                console.log(`paginaWeb ha cambiado: ${paginaWeb}`)
+            }
         }
+    },
+    mounted() {
+        new Tooltip(this.$refs.tt)
     },
     methods:{ 
         webPageCount(){
@@ -87,6 +130,12 @@ export default {
         totalQuote(){
             // probar como propiedad computada/watchers
             this.quote = this.webPageTotal + this.seoTotal + this.googleAdsTotal;
+        }, 
+        shareLink() {
+            this.$router.push({
+                name: 'home',
+                id: `paginaWeb`
+            })
         }
     }
 }
