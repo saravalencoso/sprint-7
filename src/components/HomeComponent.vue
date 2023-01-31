@@ -18,9 +18,9 @@
       
       <span>Preu: {{ quote + ' €'}}</span>
 
-      <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" ref="tt" data-bs-placement="top" title="Tooltip on top">
+      <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" ref="tt" data-bs-placement="top" title="Tooltip on top">
         Tooltip on top
-    </button>
+      </button> -->
 
       <router-link to="/">
         <button>TORNA</button>
@@ -31,7 +31,7 @@
 
 <script>
 import PanellComponent from './PanellComponent.vue'
-import { Tooltip } from 'bootstrap'
+// import { Tooltip } from 'bootstrap'
 
 export default {
     name:'HomeComponent', 
@@ -94,7 +94,7 @@ export default {
         }
     },
     mounted() {
-        new Tooltip(this.$refs.tt)
+        // new Tooltip(this.$refs.tt)
     },
     methods:{ 
         webPageCount(){
